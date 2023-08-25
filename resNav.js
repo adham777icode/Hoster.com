@@ -4,6 +4,7 @@ function showMenu() {
     if (isShowed === false) {
         isShowed = true;
         menu.classList.add("menu-open");
+        menu.classList.remove("menu-close");
     }
 }
 function hideMenu() {
