@@ -8,7 +8,6 @@
 
 body {
     background-color: white;
-    overflow-x: hidden;
     height: 5000px;
 }
 
@@ -120,7 +119,7 @@ nav {
     position: absolute;
     top: 0%;
     left: 3%;
-    width: 700px;
+    width: 50%;
     animation-name: hom-img-ani;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -284,7 +283,7 @@ nav {
 }
 
 .dom-img {
-    width: 550px;
+    width: 40%;
     position: absolute;
     right: 3%;
     top: 0%;
@@ -353,19 +352,32 @@ input[type="search"]:focus::placeholder{
 
 .res-menu {
     position: relative;
-    right: 3%;
-    top: 3%;
+    right: 15%;
+    top: 5%;
     width: 50px;
     height: 35px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .res-menu span {
+    position: absolute;
+    background-color: black;
     width: 100%;
     height: 5px;
-    background-color: black;
+}
+
+.res-menu .res-fir {
+    top: 0%;
+}
+
+.res-menu .res-sec {
+    top: 50%;
+}
+
+.res-menu .res-thi {
+    top: 100%;
 }
 
 .menu {
@@ -373,20 +385,80 @@ input[type="search"]:focus::placeholder{
     box-shadow: black 2px 2px 15px;
     z-index: 5;
     position: fixed;
+    right: 0%;
     top: 0%;
+    width: 70%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.menu-close {
+    animation-name: menu-close-ani;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menu-close-ani {
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleX(0);
+    }
+}
+
+.menu-open {
+    animation-name: menu-open-ani;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menu-open-ani {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.menu-cont {
     width: 100%;
     height: 100%;
 }
 
-.menu .hide-menu {
+.close-menu {
+    font-size: 50px;
     position: absolute;
-    margin-left: 40%;
-    font-size: 65px;
+    right: 30%;
+    top: 0%;
 }
 
-@media (min-width:280px) and (max-width:800px) {
+.menu-links {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-links li a {
+    font-size: 20px;
+}
+
+@media (min-width:280px) and (max-width:950px) {
     .links {
         display: none;
+    }
+
+    .res-menu {
+        display: block;
     }
 }
 
