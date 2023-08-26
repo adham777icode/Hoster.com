@@ -160,6 +160,7 @@ nav {
 }
 
 .get-btn {
+    z-index: 5;
     position: absolute;
     right: 19%;
     top: 55%;
@@ -352,7 +353,7 @@ input[type="search"]:focus::placeholder{
 
 .res-menu {
     position: relative;
-    right: 15%;
+    right: 5%;
     top: 5%;
     width: 50px;
     height: 35px;
@@ -435,7 +436,7 @@ input[type="search"]:focus::placeholder{
 .close-menu {
     font-size: 50px;
     position: absolute;
-    right: 30%;
+    right: 5%;
     top: 0%;
 }
 
@@ -459,6 +460,95 @@ input[type="search"]:focus::placeholder{
 
     .res-menu {
         display: block;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home * {
+        position: relative;
+    }
+
+    .hom-img {
+        width: 75%;
+    }
+
+    .hom-desc {
+        font-size: 25px;
+        width: 70%;
+    }
+
+    @keyframes hom-desc-ani {
+    from {
+        top: 10%;
+    }
+
+    to {
+        top: 10%;
+    }
+}
+    @keyframes hom-get-btn-ani {
+    from {
+        top: 25%;
+        left: 0%;
+    }
+
+    to {
+        top: 15%;
+        left: 1%;
+    }
+}
+
+    .plan {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .domain {
+        top: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .domain * {
+        position: relative;
+    }
+
+    .dom-img {
+        width: 90%;
+    }
+
+    .dom-desc {
+        font-size: 20px;
+        width: 80%;
+        top: -0%;
+    }
+
+    .search-cont {
+        width: 100%;
+    }
+
+    .search-btn {
+        top: 200%;
+        height: 40px;
+        width: 100px;
+    }
+
+    input[type="search"] {
+        height: 40px;
+        width: 80%;
+    }
+}
+
+@media (min-width:720px) and (max-width:950px) {
+    .get-btn {
+        transform: scaleY(1.7) scaleX(1.5);
     }
 }
 
